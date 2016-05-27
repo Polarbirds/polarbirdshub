@@ -1,0 +1,42 @@
+.page {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#footer {
+    text-align: center;
+}
+
+#buttonwrapper {
+    border: cyan thin;
+    border-radius: 3px;
+}
+
+#buttonwrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#buttonwrapper li {
+    float: left;
+}
+
+#buttonwrapper li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#buttonwrapper li a:hover {
+    background-color: #00AAFF;
+}
+
+h1, h2, h3 {
+    color: #0055BB;
+    font-family: "Droid Serif";
+}
