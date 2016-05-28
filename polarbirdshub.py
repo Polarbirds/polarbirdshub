@@ -11,7 +11,7 @@ def hello_world():
 
 @app.route('/home')
 def home():
-    return redirect(url_for("hello_world"))
+    return render_template('home.html')
 
 if __name__ == '__main__':
     app.run()
