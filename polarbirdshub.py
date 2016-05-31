@@ -2,11 +2,11 @@ import sqlite3
 
 from flask import g, render_template, Flask
 
-from HighscoresAPI import highscores_api
+from LeaderboardsAPI import leaderboards_api
 
 app = Flask(__name__)
 
-app.register_blueprint(highscores_api, url_prefix='/highscores')
+app.register_blueprint(leaderboards_api, url_prefix='/leaderboards')
 
 DATABASE = 'polarbirds.db'
 DEBUG = True
