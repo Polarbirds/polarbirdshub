@@ -1,8 +1,3 @@
--- hs_game(id, name)
--- hs_type(
--- highscore(type, game_, username_, value)
-
-
 DROP TABLE IF EXISTS highscore;
 DROP TABLE IF EXISTS hs_type;
 DROP TABLE IF EXISTS hs_game;
