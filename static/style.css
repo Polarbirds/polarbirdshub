@@ -3,8 +3,17 @@
     margin: 0 auto;
 }
 
-#footer {
-    text-align: center;
+#gamelist {
+    display: inline;
+}
+
+.gamebutton {
+    margin: 1em;
+    padding: 2em;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+    display: inline;
 }
 
 #buttonwrapper {
@@ -39,4 +48,8 @@
 h1, h2, h3 {
     color: #0055BB;
     font-family: "Droid Serif";
+}
+
+#footer {
+    text-align: center;
 }
