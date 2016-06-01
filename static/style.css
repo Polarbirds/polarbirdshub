@@ -5,15 +5,41 @@
 
 #gamelist {
     display: inline;
+    width: 100%;
 }
 
 .gamebutton {
     margin: 1em;
     padding: 2em;
     width: 33%;
-    min-width: 33%;
-    max-width: 33%;
     display: inline;
+}
+
+table  {
+    width: 100%;
+}
+
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.3em;
+    border: 1px solid #ccc;
+}
+
+tr:nth-child(even), thead {
+    background-color: #ddd;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+tr td:last-child{
+    width:1%;
+    white-space:nowrap;
 }
 
 #buttonwrapper {

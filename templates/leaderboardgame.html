@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Leaderboards</h1>
+<div id="scorelist">
+    <table>
+        {% for score in entries %}
+        <tr>
+            <td>{{ score.username }}</td>
+            <td>{{ score.value }}</td>
+            <td>{{ score.time_submitted }}</td>
+        </tr>
+        {% else %}
+        <p>No scores registered for game.</p>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
