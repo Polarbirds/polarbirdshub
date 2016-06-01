@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS score;
-DROP TABLE IF EXISTS lb_type;
+DROP TABLE IF EXISTS leaderboard;
 DROP TABLE IF EXISTS lb_game;
 
 CREATE TABLE lb_game (
@@ -7,7 +7,7 @@ CREATE TABLE lb_game (
   id   INTEGER PRIMARY KEY AUTOINCREMENT
 );
 
-CREATE TABLE lb_type (
+CREATE TABLE leaderboard (
   id         INTEGER PRIMARY KEY AUTOINCREMENT,
   sort_order INTEGER NOT NULL,
   datatype   TEXT    NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE score (
   username       TEXT    NOT NULL,
   time_submitted DATE    NOT NULL,
   type_id        INTEGER NOT NULL,
-  FOREIGN KEY (type_id) REFERENCES lb_type (id),
+  FOREIGN KEY (type_id) REFERENCES leaderboard (id),
   PRIMARY KEY (username, time_submitted)
 );
 
