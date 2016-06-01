@@ -4,7 +4,7 @@
 <div id="gamelist">
     {% for game in entries %}
     <div class="gamebutton">
-        {{ game.name }}
+        <a href="/leaderboards/{{ game.name }}">{{ game.name }}</a>
     </div>
     {% else %}
     <p>No games in database</p>
