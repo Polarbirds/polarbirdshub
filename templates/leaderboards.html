@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Leaderboards</h1>
+<div id="gamelist">
+    {% for game in entries %}
+    <div class="gamebutton">
+        {{ game.name }}
+    </div>
+    {% else %}
+    <p>No games in database</p>
+    {% endfor %}
+</div>
+{% endblock %}
