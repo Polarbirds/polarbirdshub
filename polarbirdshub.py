@@ -1,6 +1,6 @@
 import sqlite3
 
-from flask import g, render_template, Flask
+from flask import g, render_template, Flask, request
 
 from LeaderboardsAPI import leaderboards_api
 
@@ -66,6 +66,12 @@ def hello_world():
 @app.route('/home')
 def home():
     return render_template('home.html')
+
+
+@app.route('/data', methods=('POST',))
+def handledata():
+    print(str(request.values))
+    return "OK"
 
 
 if __name__ == '__main__':

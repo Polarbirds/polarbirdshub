@@ -29,11 +29,11 @@ th, td {
 }
 
 tr:nth-child(even), thead {
-    background-color: #ddd;
+    background-color: #dedede;
 }
 
 tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #d3d3d3;
     border-collapse: collapse;
 }
 
