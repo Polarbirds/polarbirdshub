@@ -26,3 +26,28 @@ CREATE TABLE score (
   PRIMARY KEY (username, time_submitted)
 );
 
+
+DROP TABLE IF EXISTS article;
+DROP TABLE IF EXISTS writer;
+DROP TABLE IF EXISTS category;
+
+CREATE TABLE writer (
+  name  TEXT NOT NULL,
+  email TEXT NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE category (
+  name        TEXT NOT NULL PRIMARY KEY,
+  description TEXT NOT NULL
+);
+
+CREATE TABLE article (
+  id          INT      NOT NULL,
+  poastDate   DATETIME NOT NULL,
+  title       TEXT     NOT NULL,
+  body        TEXT     NOT NULL,
+  writerEmail TEXT     NOT NULL,
+  category    TEXT     NOT NULL,
+  FOREIGN KEY (category) REFERENCES category (name),
+  FOREIGN KEY (writerEmail) REFERENCES writer (email)
+);

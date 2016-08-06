@@ -3,10 +3,12 @@ import sqlite3
 from flask import g, render_template, Flask, request
 
 from LeaderboardsAPI import leaderboards_api
+from BlogAPI import blog_API
 
 app = Flask(__name__)
 
 app.register_blueprint(leaderboards_api, url_prefix='/leaderboards')
+app.register_blueprint(blog_API, url_prefix='/blog')
 
 DATABASE = 'polarbirds.db'
 DEBUG = True
