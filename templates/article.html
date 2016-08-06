@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Blog</h1>
+<div style="border: dashed #00AAFF">
+    <h3>{{ entries.article.title }}</h3>
+    <p>{{ entries.article.body }}</p>
+    <p>{{ entries.article.id }}</p>
+    <hr/>
+</div>
+{% endblock %}

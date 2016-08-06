@@ -43,11 +43,11 @@ CREATE TABLE category (
 
 CREATE TABLE article (
   id          INT      NOT NULL,
-  poastDate   DATETIME NOT NULL,
+  postDate    DATETIME NOT NULL,
   title       TEXT     NOT NULL,
   body        TEXT     NOT NULL,
-  writerEmail TEXT     NOT NULL,
   category    TEXT     NOT NULL,
+  writerEmail TEXT     NOT NULL,
   FOREIGN KEY (category) REFERENCES category (name),
   FOREIGN KEY (writerEmail) REFERENCES writer (email)
 );
