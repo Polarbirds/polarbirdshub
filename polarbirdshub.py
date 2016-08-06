@@ -7,6 +7,9 @@ from BlogAPI import blog_API
 
 app = Flask(__name__)
 
+app.config['DEBUG'] = False
+app.config['SERVER_NAME'] = 'polarbirds.com'
+
 app.register_blueprint(leaderboards_api, url_prefix='/leaderboards')
 app.register_blueprint(blog_API, url_prefix='/blog')
 

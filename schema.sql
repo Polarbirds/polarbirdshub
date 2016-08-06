@@ -26,6 +26,7 @@ CREATE TABLE score (
   PRIMARY KEY (username, time_submitted)
 );
 
+--Tech blog
 
 DROP TABLE IF EXISTS article;
 DROP TABLE IF EXISTS writer;
@@ -43,7 +44,7 @@ CREATE TABLE category (
 
 CREATE TABLE article (
   id          INT      NOT NULL,
-  poastDate   DATETIME NOT NULL,
+  postDate    DATETIME NOT NULL,
   title       TEXT     NOT NULL,
   body        TEXT     NOT NULL,
   writerEmail TEXT     NOT NULL,
