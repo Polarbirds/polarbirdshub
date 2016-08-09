@@ -1,8 +1,8 @@
 import json
 import os
+import signal
 import sqlite3
 from distutils import log
-from signal import getsignal
 
 from flask import g, render_template, Flask, request, redirect
 from flask.globals import session
@@ -120,7 +120,7 @@ def github_hook():
             os.system('git pull')
             with open('/tmp/polarbirdshub.pid', 'r') as f:
                 pid = int(f.read())
-                os.kill(pid, getsignal().SIGHUP)
+                os.kill(pid, signal.SIGHUP)
     except ValueError:
         log.error("Unable to parse Github payload")
     return 'ok'
