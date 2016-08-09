@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container" style="margin: 0 25%;">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign in plz</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <form action="/login" method="post">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                   placeholder="Username">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                   placeholder="Password">
+                            <input class="" type="submit" value="Log in">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
