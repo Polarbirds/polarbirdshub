@@ -8,7 +8,7 @@ import polarbirdshub as hub
 
 @blog_API.route('/')
 def blog_route():
-    entries = hub.query_db("SELECT * FROM article WHERE category LIKE 'Python' ORDER BY postDate DESC LIMIT 3")
+    entries = hub.query_db("SELECT * FROM article ORDER BY postDate DESC LIMIT 3")
     return render_template('bloghub.html', entries=entries)
 
 

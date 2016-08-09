@@ -1,13 +1,14 @@
-{% extends "layout.html" %}
+{% extends "bloglayout.html" %}
 {% block body %}
-<h1>Blog</h1>
-{% for article in entries %}
-<div>
-    <h3>{{ article.title }}</h3>
+<div class="col-sm-9">
+    <h4><small>RECENT POSTS</small></h4>
+    <hr>
+    {% for article in entries %}
+    <h2>{{ article.title }}</h2>
+    <h5><span class="glyphicon glyphicon-time"></span> Post by {{ article.writerEmail }}, {{ article.postDate }}.</h5>
+    <h5><span class="label label-primary">{{ article.category }}</span></h5><br>
     <p>{{ article.body }}</p>
-    <hr />
+    <br><hr>
+    {% endfor %}
 </div>
-{% else %}
-<p>There is no articles yet!</p>
-{% endfor %}
 {% endblock %}
