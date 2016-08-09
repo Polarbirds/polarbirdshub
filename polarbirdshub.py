@@ -1,4 +1,8 @@
+import json
+import os
 import sqlite3
+from distutils import log
+from signal import getsignal
 
 from flask import g, render_template, Flask, request, redirect
 from flask.globals import session
@@ -101,6 +105,25 @@ def login():
 def logout():
     session.pop('username')
     return redirect('/')
+
+
+@app.route('/bm29FHZzfG20Pu6LKeE35d8PA', methods=['POST'])
+def github_hook():
+    try:
+        data = json.loads(request.form['payload'])
+        site_url = 'https://github.com/Polarbirds/polarbirdshub'
+        site_branch = 'master'
+        data_url = data.get('repository', {}).get('url')
+        data_branch = data.get('ref')
+        if data_url == site_url and site_branch in data_branch:
+            log.info("Code change detected. Restarting now...")
+            os.system('git pull')
+            with open('/tmp/polarbirdshub.pid', 'r') as f:
+                pid = int(f.read())
+                os.kill(pid, getsignal().SIGHUP)
+    except ValueError:
+        log.error("Unable to parse Github payload")
+    return 'ok'
 
 
 if __name__ == '__main__':
