@@ -126,9 +126,9 @@ def github_hook():
     return 'ok'
 
 
-@app.route('/google3b4c7eb337ddee7b.html')
+@app.route('/google0ba6781a85391661.html')
 def googlestuff():
-    return render_template('google3b4c7eb337ddee7b.html')
+    return render_template('google0ba6781a85391661.html')
 
 
 if __name__ == '__main__':
