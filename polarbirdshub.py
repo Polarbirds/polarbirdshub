@@ -91,7 +91,7 @@ def login():
             session['username'] = request.form['username']
             return redirect('/')
         else:
-            flash('Invalid username or password. And test')
+            flash('Invalid username or password. This is NOT a test (or is it)')
             return render_template('login.html')
     elif request.method == 'GET':
         if session.get('username'):
