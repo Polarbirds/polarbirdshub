@@ -7,6 +7,8 @@ Log in as the www-data user:
 
 ```sudo su -s /bin/bash www-data```
 
+Navigate to ```~/python/polarbirdshub```
+
 Check if the TMUX-tession is alive:
 
 ```bash
